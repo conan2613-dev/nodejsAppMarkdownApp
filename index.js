@@ -8,9 +8,23 @@ const Articles = require('./models/articles');
 //MLABS MONGO DB
 mongoose.connect('mongodb+srv://sagar:sagar12345@myfirstmongodb-tldsv.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser: true, useUnifiedTopology: true });
 
-//FOR FIREBASE
+// //FOR FIREBASE
+// const serviceAccount = require('./nodejs2613-firebase-adminsdk-7cds5-5462fc2575.json')
 
+// const admin = require("firebase-admin");
+// firebase.initializeApp({
+//     serviceAccount: "./nodejs2613-firebase-adminsdk-7cds5-5462fc2575.json",
 
+//     databaseURL: "https://nodejs2613.firebaseio.com"
+// }, );
+
+// admin.initializeApp(
+//     functions.config.admin
+// )
+
+// //FOR FIREBASE REALTIME DATABASE
+// var db = firebase.database();
+// var ref = db.ref("/user_data");
 
 
 
@@ -36,9 +50,22 @@ app.get('/', async(req, res) => {
         // res.send("hello this is index page")
 
     //SENDING DATA TO FIREBASE REALTIME DATABASE
-    
+    // ref.set([{
+    //         id: 20,
+    //         name: "Jane Doe",
+    //         email: "jane@doe.com",
+    //         website: "https://jane.foo.bar"
+    //     },
+    //     {
+    //         id: 21,
+    //         name: "John doe",
+    //         email: "john@doe.com",
+    //         website: "https://foo.bar"
+    //     }
+    // ]);
 
 })
 
-
-});
+// exports.app = functions.https.onRequest(app, () => {
+//     console.log("working");
+// });
